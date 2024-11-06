@@ -1,0 +1,6 @@
+pak_path=C:\Program Files (x86)\Steam\steamapps\common\Apollo Justice Ace Attorney Trilogy\re_chunk_000.pak
+release_list_path=AJ_AAT_STM_Release.list
+extracted_dir=_extracted
+mod_dir=_mod
+patch_pak_path=C:\Program Files (x86)\Steam\steamapps\common\Apollo Justice Ace Attorney Trilogy\re_chunk_000.pak.patch_001.pak
+language=fr

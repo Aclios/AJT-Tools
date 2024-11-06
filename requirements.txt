@@ -1,0 +1,9 @@
+astc_encoder_py==0.1.1
+chardet==5.2.0
+etcpak==0.9.12
+mmh3==4.1.0
+Pillow==11.0.0
+pyswizzle==1.0.2
+soundfile==0.12.1
+texture2ddecoder==1.0.4
+zstd==1.5.5.1
