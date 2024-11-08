@@ -51,7 +51,8 @@ This is only relevant for .tex files, it shouldn't matter for others. Other plat
 # As a python module
 
 AJT Tools can also be used as a Python module.
-## Pak files
+
+**Pak files**
 
 ```python
 from AJTTools import REPAk, build_pak_from_dir
@@ -66,7 +67,7 @@ pak.unpack("output_dir", "release_list_path")
 build_pak_from_dir("mod_dir",".pak.patch_file_path")
 ```
 
-## Font files
+**Font files**
 
 ```python
 from AJTTools.plugins.font import REFont
@@ -79,7 +80,7 @@ font.import_file("newfont.otf") # import
 font.save("font.oft.1") # save
 ```
 
-## Tex files
+**Tex files**
 
 ```python
 from AJTTools.plugins.tex import Tex
@@ -92,7 +93,7 @@ tex.import_file("newimage.png") # import
 tex.save("image.tex.35") # save
 ```
 
-## MSG files
+**MSG files**
 
 ```python
 from AJTTools.plugins.msg import MSGPlugin
@@ -116,7 +117,7 @@ plugin.export_file("message.msg.22","message.csv") # export
 plugin.import_file("message.msg.22","newmessage.csv") # import/save
 ```
 
-## Audio files (asrc)
+**Audio files (asrc)**
 
 ```python
 from AJTTools.plugins.sound import ASRC
@@ -129,7 +130,7 @@ asrc.import_file("newse.wav") # import
 asrc.save("se.asrc.31") # save
 ```
 
-## AJT Script files
+**AJT Script files**
 
 ```python
 from AJTTools.plugins.script import AA4Script, AA56Script
@@ -151,7 +152,7 @@ script = AA56Script("script.txt") #aa5 & 6
 script.write_user2("script.user.2")
 ```
 
-# Credits
+**Credits**
 
 [REE.PAK.Tool](https://github.com/Ekey/REE.PAK.Tool/tree/main) by Ekey and [retool](https://www.patreon.com/FluffyQuack) by FluffyQuack for file format.
 
