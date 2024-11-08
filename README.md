@@ -159,7 +159,12 @@ Modules and packages used:
 
 | Package   | Author   | License |
 |---      |---    |---   |
-| Kunitsu-Gami: Path of the Goddess | [KGPG_MSG_Release](Projects)
-| Resident Evil 2 | [RE2_MSG_Release](Projects)
-| Resident Evil 3 | [RE3_MSG_Release](Projects)
-| MONSTER HUNTER RISE | [MHR_MSG_Release](Projects)
+| [etcpack](https://github.com/K0lb3/etcpak) | K0lb3 | MIT
+| [texture2ddecoder](https://github.com/K0lb3/texture2ddecoder) | K0lb3 | MIT
+| [astc-encoder-py](https://github.com/K0lb3/astc-encoder-py) | K0lb3 | MIT
+| [REMSG_Converter](https://github.com/dtlnor/REMSG_Converter) | dtlnor | MIT
+| [chardet](https://github.com/chardet/chardet) | dan-blanchard | LGPL-2.1
+| [mmh3](https://github.com/hajimes/mmh3) | hajimes | MIT
+| [Pillow](https://github.com/python-pillow/Pillow) | Jeffrey A. Clark | MIT-CMU
+| [soundfile](https://github.com/bastibe/python-soundfile) | bastibe | BSD-3-Clause
+| [zstd](https://github.com/sergey-dryabzhinsky/python-zstd) | Sergey Dryabzhinsky, Anton Stuk | BSD-2-Clause
