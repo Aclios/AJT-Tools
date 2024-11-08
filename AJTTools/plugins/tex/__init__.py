@@ -12,7 +12,7 @@ class TexPlugin(Plugin):
     def export_file(self, input_filepath : Path, output_filepath : Path):
         tex = Tex(input_filepath)
         try_create_dir(str(output_filepath))
-        tex.to_png(str(output_filepath) + '.png')
+        tex.export_file(str(output_filepath) + '.png')
 
     def import_file(self, input_filepath : Path, file_to_import : Path):
         tex = Tex(input_filepath)

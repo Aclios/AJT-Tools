@@ -16,7 +16,7 @@ def main():
 
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("-e", "--exportf", action="store_true", help="Batch export files")
-    mode.add_argument("-i", "--importf", action="store_true", help="Batch import files")    
+    mode.add_argument("-i", "--importf", action="store_true", help="Batch import files")
 
     for command, plugin in plugins.items():
         parser.add_argument(command, help=plugin.help, action='store_true')
@@ -25,6 +25,7 @@ def main():
     options = vars(args)
 
     if args.exportf:
+        assert not Path(info["pak_path"]).exists(), "Delete the extraction folder before exporting files again. This is intended to be a security feature."
         pak = REPak(Path(info["pak_path"]))
         pak.unpack(Path(info["extracted_dir"]), Path(info["release_list_path"]))
         root_dir = list((Path(info["extracted_dir"]) / 'natives').iterdir())[0]

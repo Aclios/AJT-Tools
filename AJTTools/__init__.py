@@ -8,7 +8,7 @@ from .plugins.plugin import Plugin
 
 plugins : dict[str : Plugin] = {
     "-font" : FontPlugin(),
-    "-msg" : MSGPlugin('txt','fr'),
+    "-msg" : MSGPlugin('csv','all'),
     "-script" : ScriptPlugin('aa4'),
     "-sound" : SoundPlugin(),
     "-tex" : TexPlugin()

@@ -26,7 +26,7 @@ class Tex:
     def load_pil_image(self, mipmap_idx : int) -> Image.Image:
         return self.mipmaps[mipmap_idx].decode(self.header.width, self.header.height)
 
-    def to_png(self,png_filepath : Path):
+    def export_file(self,png_filepath : Path):
         self.image.save(png_filepath)
 
     def import_file(self, im_filepath : Path):

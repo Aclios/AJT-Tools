@@ -7,10 +7,11 @@ from .src.REMSGUtil import SHORT_LANG_LU
 
 class MSGPlugin(Plugin):
     help = "Message data (.msg) files"
-    def __init__(self, export_type : str, lang_code : str):
+    def __init__(self, export_type : str, lang_code : str = None):
         super().__init__("MSGPlugin",".msg","msg")
         assert export_type in ["txt","csv","json"], "export_type should be either 'txt', 'csv', or 'json'"
-        assert lang_code in SHORT_LANG_LU or lang_code == 'all', "Invalid language code"
+        if export_type == 'txt':
+            assert lang_code in SHORT_LANG_LU or lang_code == 'all', "Invalid language code"
         self.export_type = export_type
         self.lang_code = lang_code
 

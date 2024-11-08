@@ -67,7 +67,7 @@ class ASRC:
             self.data = f.read(self.audio_filesize)
             assert self.data[0:4] in [b"RIFF", b"OggS"], "Error while reading {filepath} - corrupted data"
 
-    def export(self,audio_filepath : Path):
+    def export_file(self,audio_filepath : Path):
         if not self.srch_flag:
             ext = ext_dict[self.format]
             with open(str(audio_filepath) + ext,mode='wb') as f:

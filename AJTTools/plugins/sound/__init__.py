@@ -14,7 +14,7 @@ class SoundPlugin(Plugin):
         sound = ASRC(input_filepath, version)
         if not sound.srch_flag:
             try_create_dir(str(output_filepath))
-            sound.export(output_filepath)
+            sound.export_file(output_filepath)
 
     def import_file(self, input_filepath : Path, file_to_import : Path):
         version = int(input_filepath.name.split('.')[2])

@@ -1,0 +1,12 @@
+*.pyc
+sound/*
+script/*
+tex/*
+font/*
+msg/*
+Projects/*
+_mod/*
+_extracted/*
+*.bat
+*.list
+log.txt
