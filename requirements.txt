@@ -1,4 +1,4 @@
-astc_encoder_py==0.1.1
+astc_encoder_py==0.1.11
 chardet==5.2.0
 etcpak==0.9.12
 mmh3==4.1.0

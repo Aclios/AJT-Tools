@@ -11,8 +11,8 @@ Import and export for the following formats are supported:
 - Textures (.tex)
 - Message data (.msg)
 - ASRC audio (.asrc)
-- Font(.oft)
-- Apollo Justice Trilogy script files (for AA4, AA5 & AA6)
+- Font (.oft)
+- Apollo Justice Trilogy script files (.user.2) - AA4, AA5 & AA6
 
 ### Supported platforms
 
@@ -31,12 +31,12 @@ This is only relevant for .tex files, it shouldn't matter for others. Other plat
 - Install the required packages by running `python -m pip install -r requirements.txt` in a terminal.
 
 - Fill the path_init.txt with the relevant information. Examples for Apollo Justice Steam are already there.
-    - **pak_path** is the path of the main archive of the game, which should be name re_chunk_000.pak
+    - **pak_path** is the path of the main archive of the game, which should be named re_chunk_000.pak
     - **release_list_path** is the path of the release list of the game and platform, which is required to extract files with their real name. You can find release lists of all RE Engine games here: https://github.com/Ekey/REE.PAK.Tool/tree/main/Projects.
     - **extracted_dir** is the path of the folder where all the files of the .pak will be extracted.
     - **mod_dir** is the path of the folder where the modded files will be written. 
     - **patch_pak_path** is the path where the patch pak file will be written. For Steam games, it should be the game folder, for Switch games it can be the mods/contents/<game_id>/romfs of an emulator. This file should be named "re_chunk_000.pak.patch_001.pak". If such files already exist and you want to keep the game updates, name it with the higher id + 1 (If the last update is "re_chunk_000.pak.patch_005.pak", name it "re_chunk_000.pak.patch_006.pak").
-    - **language** can be set to a specific language if you don't want to extract files specific to the other languages. By default everything will be extracted ("all")
+    - **language** can be set to a specific language if you don't want to extract files specific to the other languages. By default everything will be extracted ("all").
 
 # How to use
 
@@ -112,8 +112,8 @@ plugin.import_file("message.msg.22","newmessage.json") # import/save
 ## work with txt files (single language)
 
 plugin = MSGPlugin("txt","en") #init and chose english as export/import language
-plugin.export_file("message.msg.22","message.csv") # export
-plugin.import_file("message.msg.22","newmessage.csv") # import/save
+plugin.export_file("message.msg.22","message.txt") # export
+plugin.import_file("message.msg.22","newmessage.txt") # import/save
 ```
 
 ## Audio files (asrc)
