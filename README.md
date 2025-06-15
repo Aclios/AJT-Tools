@@ -26,7 +26,7 @@ This is only relevant for .tex files, it shouldn't matter for others. Other plat
 
 # Get Started
 
-- Python 3.11 is required. Older versions could work but have not been tested.
+- Python 3.11 or superior is required.
 
 - Install the required packages by running `python -m pip install -r requirements.txt` in a terminal.
 

@@ -1,6 +1,9 @@
 from AJTTools import plugins, REPak, build_pak_from_dir
 import argparse
 from pathlib import Path
+import sys
+
+assert sys.version_info[0] >= 3 and sys.version_info[1] >= 11, f'Invalid Python version: 3.11 or superior is required, current version: {sys.version_info[0]}.{sys.version_info[1]}'
 
 info = {}
 lines = open("path_init.txt",'r',encoding='utf-8').readlines()
