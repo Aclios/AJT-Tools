@@ -19,7 +19,9 @@ class Tex:
             self.mipmaps : list[TexMipmap] = [Mipmap(f, self.header, idx) for idx in range(self.header.mipmap_count)]
                         
             if self.header.platform in ["stm","ps4"]:
-                self.header.width = self.mipmaps[0].get_real_width_from_pitch(self.header.tex_format)
+                real_width = self.mipmaps[0].get_real_width_from_pitch(self.header.tex_format)
+                if real_width > self.header.width:
+                    self.header.width = real_width
 
             self.image = self.load_pil_image(0)
 

@@ -134,7 +134,7 @@ class BC7_UNORM(TexFormat):
     
 class ASTC_UNORM(TexFormat):
     bytes_per_block = 16
-    pitch_type = 3
+    pitch_type = 1
 
     def __init__(self,block_width: int, block_height : int):
         self.block_size = (block_width,block_height)
@@ -152,6 +152,19 @@ class ASTC_UNORM(TexFormat):
     
     def decode(self, data : bytes, width : int, height : int) -> tuple[bytes,str]:
         return texture2ddecoder.decode_astc(data, width, height,self.block_width,self.block_height) , 'BGRA'
+    
+class ETC2_RGB(TexFormat):
+    bytes_per_block = 8
+    pitch_type = 1
+    block_size = (4,4)
+    bits_per_pixel = 4
+
+    def encode(self, data : bytes, width : int, height : int) -> bytes:
+        return etcpak.compress_etc2_rgb(data, width, height)
+
+    def decode(self, data : bytes, width : int, height : int) -> tuple[bytes,str]:
+        return texture2ddecoder.decode_etc2(data, width, height) , 'BGRA'
+
 
 formats = {
 0x1b:R8G8B8A8_UNORM(),
@@ -218,7 +231,8 @@ formats = {
 0x0427:ASTC_UNORM(12,10),
 0x0428:ASTC_UNORM(12,12),
 0x0429:ASTC_UNORM(12,12),
-0x042a:ASTC_UNORM(12,12)
+0x042a:ASTC_UNORM(12,12),
+0x043e:ETC2_RGB(),
 }
 
 def getformat(id : int) -> TexFormat:

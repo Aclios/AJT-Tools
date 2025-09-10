@@ -18,6 +18,7 @@ Import and export for the following formats are supported:
 
 The following platforms are supported:
 
+- Android
 - Steam
 - Nintendo Switch
 - PS4
